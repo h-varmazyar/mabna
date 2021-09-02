@@ -18,7 +18,7 @@ func init() {
 		log.Panicf("db port cast failed: %v", err)
 	}
 	err, db = (&gorm.DatabaseConfig{
-		Type:     gorm.MYSQL,
+		Type:     gorm.PostgreSQL,
 		Username: os.Getenv("DB_USERNAME"),
 		Password: os.Getenv("DB_PASSWORD"),
 		CharSet:  os.Getenv("DB_CHARSET"),
